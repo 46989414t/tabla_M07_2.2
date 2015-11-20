@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextField fx:id="idCiudad" layoutX="23.0" layoutY="75.0" promptText="Barcelona" />
+      <TextField fx:id="idUnidad" layoutX="23.0" layoutY="141.0" promptText="metric" />
+      <TextField fx:id="idDias" layoutX="23.0" layoutY="200.0" promptText="7" />
+      <Pane layoutX="335.0" layoutY="67.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <GridPane layoutY="48.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="35.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Dia" />
+                  <Label text="Maxima" GridPane.rowIndex="1" />
+                  <Label text="Minima" GridPane.rowIndex="2" />
+                  <Label text="DiaLabel" GridPane.columnIndex="1" />
+                  <Label text="MaximaLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="MinimaLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Button fx:id="idAceptar" layoutX="70.0" layoutY="282.0" mnemonicParsing="false" onAction="#onAceptar" text="Aceptar" />
+      <Text layoutX="23.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ciudad" />
+      <Text layoutX="23.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unidad" />
+      <Text layoutX="23.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dias" />
+   </children>
+</AnchorPane>
