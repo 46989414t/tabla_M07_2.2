@@ -29,6 +29,15 @@ public class ConectarApi {
     public String city;
     public String unitats = "metric";
     public String dies;
+
+    ArrayList<String> minimaArrayList = new ArrayList<String>();
+    ArrayList<String> maximaArrayList = new ArrayList<String>();
+    ArrayList<String> fechaArrayList = new ArrayList<String>();
+
+    public String fecha = "";
+    public String maxima ="";
+    public String minima ="";
+
     //public String api_key="4c3c9fd618e5d67bb93faf64733a3470";
 
     /*public ConectarApi(String city, String unitats, String dies) {
@@ -145,12 +154,78 @@ public class ConectarApi {
             JSONObject listaJsonObj = (JSONObject)respostaList.get(i);
             //Extraer atributos del tag temp
             JSONObject temp = (JSONObject)listaJsonObj.get("temp");
-            System.out.println("DIA: "+(diaInt+i)+"/"+mes+"/"+annio);
-            System.out.println("Mínimas: "+temp.get("min"));
-            System.out.println("Máximas: "+temp.get("max")+"\n");
+            //minima = (String) temp.get("min");
+            //System.out.println("DIA: "+(diaInt+i)+"/"+mes+"/"+annio);
+            //System.out.println("Mínimas: "+temp.get("min"));
+            //System.out.println("Máximas: "+temp.get("max")+"\n");
+            System.out.println("vuelta numero: "+i);
+
+            //String min = (String) temp.get("min");
+
+            minimaArrayList.add(temp.get("min")+"\n");
+            maximaArrayList.add(temp.get("max")+"\n");
+            fechaArrayList.add((diaInt+i)+"/"+mes+"/"+annio+"\n");
 
         }
 
+    }
+
+    public ArrayList<String> getFechaArrayList() {
+        //peticio();
+        return fechaArrayList;
+    }
+
+    public void setFechaArrayList(ArrayList<String> fechaArrayList) {
+        this.fechaArrayList = fechaArrayList;
+    }
+
+    public ArrayList<String> getMaximaArrayList() {
+        System.out.println("****llega a maxima arraylist******");
+        //peticio();
+        return maximaArrayList;
+    }
+
+    public void setMaximaArrayList(ArrayList<String> maximaArrayList) {
+        this.maximaArrayList = maximaArrayList;
+    }
+
+    public ArrayList<String> getMinimaArrayList() {
+        System.out.println("*****llega a get minima****");
+        System.out.println("***envia a peticio***");
+        peticio();
+        System.out.println("***surt de peticio***");
+        return minimaArrayList;
+    }
+
+    public void setMinimaArrayList(ArrayList<String> minimaArrayList) {
+        this.minimaArrayList = minimaArrayList;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getMaxima() {
+        return maxima;
+    }
+
+    public void setMaxima(String maxima) {
+        this.maxima = maxima;
+    }
+
+    public String getMinima() {
+
+        peticio();
+
+        return minima;
+    }
+
+    public void setMinima(String minima) {
+        this.minima = minima;
     }
 
 }
