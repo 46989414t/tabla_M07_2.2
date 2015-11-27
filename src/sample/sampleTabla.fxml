@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <TextField fx:id="idCiudad" layoutX="23.0" layoutY="67.0" promptText="ciudad" />
       <TextField fx:id="idDias" layoutX="21.0" layoutY="126.0" promptText="prevision" />
@@ -18,5 +18,6 @@
       <Text layoutX="240.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Día" />
       <Text layoutX="319.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp Max" />
       <Text layoutX="404.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temp Min" />
+      <Button layoutX="78.0" layoutY="215.0" mnemonicParsing="false" onAction="#onReset" text="Reset" />
    </children>
 </AnchorPane>
